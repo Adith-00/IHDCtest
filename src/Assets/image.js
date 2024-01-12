@@ -8,6 +8,7 @@ import FirstPageicon from "./Images/first_page_FILL0_wght100_GRAD0_opsz24.svg"
 import previousIcon from "./Images/chevron_left_FILL0_wght100_GRAD0_opsz24.svg"
 import Nexticon from "./Images/chevron_right_FILL0_wght100_GRAD0_opsz24.svg"
 import LastPageicon from "./Images/last_page_FILL0_wght100_GRAD0_opsz24.svg"
+import hamburegrMenu from "./Images/bars-solid.svg"
 
 export {
     menu,
@@ -19,6 +20,7 @@ export {
     FirstPageicon,
     previousIcon,
     Nexticon,
-    LastPageicon
+    LastPageicon,
+    hamburegrMenu
 
 }

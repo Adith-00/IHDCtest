@@ -21,6 +21,62 @@
         }
     }
 
+    .dropdown{
+        position:absolute;
+        display: none;
+        flex-direction: column;
+        width: 200px;
+        background-color: white;
+        border-radius: 10px;
+        .Navoption {
+            display: flex;
+            padding: 6px;
+            gap: 25px;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.3s ease;
+
+
+            &:hover {
+                scale: 1.02;
+                transition: 0.3s ease;
+
+                h2 {
+                    color: rebeccapurple;
+                    font-weight: 500;
+                }
+            }
+
+
+            .image {
+                width: 30px;
+                display: flex;
+
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+
+            h2 {
+                font-size: 14px;
+                min-width: 60%;
+                font-weight: 400;
+                text-align: left;
+                justify-self: flex-start;
+            }
+        }
+    }
+    .hamburger{
+        width: 25px;
+        display: none;
+
+        img{
+            width: 100%;
+            display: block;
+        }
+    }
     .options {
         display: flex;
         flex-direction: column;
@@ -133,36 +189,56 @@
     
  }
  @media screen and (max-width: 565px) {
-.Navigation{
-    flex-direction: row;
-    justify-content: space-around;
-    max-width: 100%;
-    min-width: 100%;
-    gap: 10px;
-    padding: 10px;
-    .menuLogo{
-        min-width:unset;
-        min-height: unset;
-        width: 60px;
-        height: 60px;
-        padding: 5px;
-       
-    }
-    .options{
-        flex-direction: row;
-        width: fit-content;
-        min-width: unset;
-        .Navoption{
-            .emptydiv{
-                display: none
+        .Navigation{
+            flex-direction: row;
+            min-height: unset;
+            justify-content: space-around;
+            max-width: 100%;
+            min-width: 100%;
+            gap: 10px;
+            padding: 10px;
+            .menuLogo{
+                min-width:unset;
+                min-height: unset;
+                width: 60px;
+                height: 60px;
+                padding: 5px;
+            
             }
-            .image{
-                &:hover{
-                    border-bottom: 2px solid rebeccapurple;
+            .options{
+                flex-direction: row;
+                width: fit-content;
+                min-width: unset;
+                .Navoption{
+                    .emptydiv{
+                        display: none
+                    }
+                    .image{
+                        &:hover{
+                            border-bottom: 2px solid rebeccapurple;
+                        }
+                    }
                 }
             }
         }
+
+ }
+ @media screen and (max-width: 435px) {
+    .Navigation{
+        position: absolute;
+        justify-content: space-between;
+        padding: 10px 30px;
+        .hamburger{
+            display: block;
+        }
+        .dropdown{
+            display: flex;
+            bottom: -238%;
+            right: 3%;
+        }
+        .options{
+            display: none;
+        }
     }
-}
 
  }

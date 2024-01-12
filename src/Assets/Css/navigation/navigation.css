@@ -19,6 +19,54 @@
   width: 100%;
   display: block;
 }
+.Navigation .dropdown {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  width: 200px;
+  background-color: white;
+  border-radius: 10px;
+}
+.Navigation .dropdown .Navoption {
+  display: flex;
+  padding: 6px;
+  gap: 25px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.Navigation .dropdown .Navoption:hover {
+  scale: 1.02;
+  transition: 0.3s ease;
+}
+.Navigation .dropdown .Navoption:hover h2 {
+  color: rebeccapurple;
+  font-weight: 500;
+}
+.Navigation .dropdown .Navoption .image {
+  width: 30px;
+  display: flex;
+}
+.Navigation .dropdown .Navoption .image img {
+  width: 100%;
+  display: block;
+}
+.Navigation .dropdown .Navoption h2 {
+  font-size: 14px;
+  min-width: 60%;
+  font-weight: 400;
+  text-align: left;
+  justify-self: flex-start;
+}
+.Navigation .hamburger {
+  width: 25px;
+  display: none;
+}
+.Navigation .hamburger img {
+  width: 100%;
+  display: block;
+}
 .Navigation .options {
   display: flex;
   flex-direction: column;
@@ -112,6 +160,7 @@
 @media screen and (max-width: 565px) {
   .Navigation {
     flex-direction: row;
+    min-height: unset;
     justify-content: space-around;
     max-width: 100%;
     min-width: 100%;
@@ -136,5 +185,23 @@
   }
   .Navigation .options .Navoption .image:hover {
     border-bottom: 2px solid rebeccapurple;
+  }
+}
+@media screen and (max-width: 435px) {
+  .Navigation {
+    position: absolute;
+    justify-content: space-between;
+    padding: 10px 30px;
+  }
+  .Navigation .hamburger {
+    display: block;
+  }
+  .Navigation .dropdown {
+    display: flex;
+    bottom: -238%;
+    right: 3%;
+  }
+  .Navigation .options {
+    display: none;
   }
 }/*# sourceMappingURL=navigation.css.map */
