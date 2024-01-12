@@ -1,0 +1,168 @@
+.Navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap:16% ;
+    background-color: white;
+    box-shadow: 0 6px 10px 0 #0003, 0 8px 22px 0 #00000030;
+    min-width: 20%;
+    max-width: 20%;
+    min-height: 100%;
+    align-items: center;
+
+    .menuLogo {
+        min-width: 20%;
+        max-width: 20%;
+        padding-top: 20%;
+
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    .options {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        min-width: 100%;
+        .Navoption {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.3s ease;
+
+
+            &:hover {
+                scale: 1.02;
+                transition: 0.3s ease;
+
+                .emptydiv {
+                    transition: 0.1s ease;
+                    background-color: rebeccapurple;
+                }
+
+                h2 {
+                    color: rebeccapurple;
+                    font-weight: 500;
+                }
+            }
+
+            padding: 6px;
+            gap: 25px;
+
+            .emptydiv {
+                background-color: transparent;
+                border-radius: 4px;
+                width: 6px;
+                height: 100%;
+            }
+
+            .image {
+                width: 40px;
+                display: flex;
+
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+
+            h2 {
+                font-size: 24px;
+                min-width: 60%;
+                font-weight: 400;
+                text-align: left;
+                justify-self: flex-start;
+            }
+        }
+        .activeNav{
+            scale: 1.02;
+                transition: 0.3s ease;
+
+                .emptydiv {
+                    transition: 0.1s ease;
+                    background-color: rebeccapurple;
+                }
+
+                h2 {
+                    color: rebeccapurple;
+                    font-weight: 600;
+                }
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+.Navigation{
+    .options{
+        .Navoption{
+            h2{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+}
+@media screen and (max-width: 1000px) {
+    .Navigation{
+        min-width:unset;
+        max-width: 70px;
+        justify-content: center;
+        gap: 20%;
+        .menuLogo{
+            min-width: 56%;
+            max-width: 56%;
+        }
+        .options{
+            .Navoption{
+                justify-content: unset;
+                gap: 2px;
+                .emptydiv{
+                    width: 4px;
+                }
+                h2{
+                    font-size: 18px;
+                    display: none;
+                    min-width: unset;
+                }
+            }
+        }
+    }
+    
+ }
+ @media screen and (max-width: 565px) {
+.Navigation{
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 100%;
+    min-width: 100%;
+    gap: 10px;
+    padding: 10px;
+    .menuLogo{
+        min-width:unset;
+        min-height: unset;
+        width: 60px;
+        height: 60px;
+        padding: 5px;
+       
+    }
+    .options{
+        flex-direction: row;
+        width: fit-content;
+        min-width: unset;
+        .Navoption{
+            .emptydiv{
+                display: none
+            }
+            .image{
+                &:hover{
+                    border-bottom: 2px solid rebeccapurple;
+                }
+            }
+        }
+    }
+}
+
+ }

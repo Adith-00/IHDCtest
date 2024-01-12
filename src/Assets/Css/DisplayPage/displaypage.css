@@ -1,0 +1,275 @@
+.Displaypage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  gap: 15%;
+  padding: 50px;
+}
+.Displaypage .top {
+  display: flex;
+}
+.Displaypage .top h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-height: 60px;
+  background-color: white;
+  padding-right: 30px;
+  border-radius: 40px;
+  text-align: center;
+  font-size: 25px;
+  color: black;
+  font-weight: 400;
+}
+.Displaypage .top h2 i {
+  display: flex;
+  background-color: rgb(180, 180, 180);
+  width: 75px;
+  height: 75px;
+  padding: 20px;
+  border-radius: 50px;
+}
+.Displaypage .top h2 i img {
+  width: 100%;
+  display: block;
+  font-size: 11px;
+}
+.Displaypage .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  justify-content: space-around;
+}
+.Displaypage .bottom .title {
+  font-size: 45px;
+  font-weight: 600;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.632);
+}
+.Displaypage .bottom .tableSection .FilterSection {
+  display: flex;
+}
+.Displaypage .bottom .tableSection .FilterSection .DropDown {
+  display: none;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #ffffff;
+  color: blue;
+  font-weight: 500;
+}
+.Displaypage .bottom .tableSection .FilterSection .DropDown option {
+  padding: 10px;
+  font-size: 12px;
+  color: blue;
+  font-weight: 400;
+}
+.Displaypage .bottom .tableSection .FilterSection .active {
+  background: #ffffff;
+}
+.Displaypage .bottom .tableSection .FilterSection .active h1 {
+  color: black;
+}
+.Displaypage .bottom .tableSection .FilterSection .active h1 span {
+  display: none;
+}
+.Displaypage .bottom .tableSection .FilterSection .filters {
+  display: flex;
+  justify-content: space-around;
+  width: 34%;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+.Displaypage .bottom .tableSection .FilterSection .filters:hover {
+  transition: 0.2s ease-in;
+  background: #ffffff;
+}
+.Displaypage .bottom .tableSection .FilterSection .filters:hover h1 {
+  color: black;
+}
+.Displaypage .bottom .tableSection .FilterSection .filters:hover h1 span {
+  display: none;
+}
+.Displaypage .bottom .tableSection .FilterSection .filters h1 {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 30px;
+  font-weight: 400;
+  color: rgba(23, 124, 255, 0.809);
+  padding: 10px;
+}
+.Displaypage .bottom .tableSection .FilterSection .filters h1 span {
+  position: absolute;
+  top: -35%;
+  right: -10%;
+  font-size: 12px;
+  color: white;
+  background-color: rebeccapurple;
+  padding: 8px;
+  border-radius: 9px;
+}
+.Displaypage .bottom .tableSection .data {
+  overflow: scroll;
+  max-height: 263px;
+}
+.Displaypage .bottom .tableSection .data table {
+  border-collapse: collapse;
+  min-width: 710px;
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.1882352941);
+}
+.Displaypage .bottom .tableSection .data table thead tr {
+  border-top: 1px solid rgba(0, 0, 0, 0.148);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.148);
+}
+.Displaypage .bottom .tableSection .data table thead tr th {
+  padding: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+.Displaypage .bottom .tableSection .data table tbody tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.148);
+}
+.Displaypage .bottom .tableSection .data table tbody tr td {
+  text-align: center;
+  padding: 30px;
+  font-size: 19px;
+  font-weight: 400;
+  color: black;
+}
+.Displaypage .bottom .tableSection .Pagination {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  background: white;
+  padding: 30px;
+  gap: 30px;
+}
+.Displaypage .bottom .tableSection .Pagination .rowSelector {
+  min-width: 150px;
+  display: flex;
+  gap: 5px;
+}
+.Displaypage .bottom .tableSection .Pagination .rowSelector p {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(135, 134, 134);
+}
+.Displaypage .bottom .tableSection .Pagination .rowSelector select {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(135, 134, 134);
+  cursor: pointer;
+}
+.Displaypage .bottom .tableSection .Pagination .pageNoDisplayer {
+  justify-content: center;
+  align-items: center;
+  min-width: 50px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(135, 134, 134);
+}
+.Displaypage .bottom .tableSection .Pagination .pageNoDisplayer span {
+  font-weight: 500;
+}
+.Displaypage .bottom .tableSection .PaginationButtons {
+  min-width: 30%;
+  display: flex;
+  gap: 10px;
+}
+.Displaypage .bottom .tableSection .PaginationButtons i {
+  display: flex;
+  width: 25px;
+  height: 25px;
+}
+.Displaypage .bottom .tableSection .PaginationButtons i img {
+  width: 100%;
+  display: block;
+}
+
+@media screen and (max-width: 1470px) {
+  .Displaypage .bottom .tableSection .data table thead tr {
+    padding: 20px;
+  }
+  .Displaypage .bottom .tableSection .data table thead tr th {
+    padding: 20px;
+    font-size: 18px;
+  }
+  .Displaypage .bottom .tableSection .data table tbody tr td {
+    padding: 20px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .Displaypage {
+    padding: 25px;
+  }
+  .Displaypage .bottom .tableSection .FilterSection .filters h1 {
+    font-size: 25px;
+  }
+  .Displaypage .bottom .tableSection .FilterSection .filters h1 span {
+    top: -15%;
+    font-size: 9px;
+  }
+  .Displaypage .bottom .tableSection .data table thead tr {
+    padding: 20px;
+  }
+  .Displaypage .bottom .tableSection .data table thead tr th {
+    padding: 20px;
+    font-size: 18px;
+  }
+  .Displaypage .bottom .tableSection .data table tbody tr td {
+    padding: 20px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .Displaypage .bottom .tableSection .FilterSection .filters h1 {
+    font-size: 20px;
+  }
+  .Displaypage .bottom .tableSection .FilterSection .filters h1 span {
+    top: -15%;
+    font-size: 9px;
+  }
+  .Displaypage .bottom .tableSection .data table thead tr {
+    padding: 15px;
+  }
+  .Displaypage .bottom .tableSection .data table thead tr th {
+    padding: 11px;
+    font-size: 17px;
+  }
+  .Displaypage .bottom .tableSection .data table tbody tr td {
+    padding: 15px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .Displaypage .bottom .tableSection .FilterSection .DropDown {
+    display: block;
+  }
+  .Displaypage .bottom .tableSection .FilterSection .filters {
+    display: none;
+  }
+}
+@media screen and (max-width: 735px) {
+  .Displaypage .bottom .tableSection .FilterSection .DropDown {
+    display: block;
+  }
+  .Displaypage .bottom .tableSection .FilterSection .filters {
+    display: none;
+  }
+}
+@media screen and (max-width: 565px) {
+  .Displaypage {
+    width: 100%;
+    height: 100vh;
+    justify-content: space-evenly;
+  }
+}/*# sourceMappingURL=displaypage.css.map */
