@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    gap:16% ;
+    gap: 16%;
     background-color: white;
     box-shadow: 0 6px 10px 0 #0003, 0 8px 22px 0 #00000030;
     min-width: 20%;
@@ -21,13 +21,14 @@
         }
     }
 
-    .dropdown{
-        position:absolute;
+    .dropdown {
+        position: absolute;
         display: none;
         flex-direction: column;
         width: 200px;
         background-color: white;
         border-radius: 10px;
+
         .Navoption {
             display: flex;
             padding: 6px;
@@ -68,20 +69,23 @@
             }
         }
     }
-    .hamburger{
+
+    .hamburger {
         width: 25px;
         display: none;
 
-        img{
+        img {
             width: 100%;
             display: block;
         }
     }
+
     .options {
         display: flex;
         flex-direction: column;
         gap: 25px;
         min-width: 100%;
+
         .Navoption {
             display: flex;
             justify-content: space-between;
@@ -133,52 +137,59 @@
                 justify-self: flex-start;
             }
         }
-        .activeNav{
+
+        .activeNav {
             scale: 1.02;
-                transition: 0.3s ease;
+            transition: 0.3s ease;
 
-                .emptydiv {
-                    transition: 0.1s ease;
-                    background-color: rebeccapurple;
-                }
+            .emptydiv {
+                transition: 0.1s ease;
+                background-color: rebeccapurple;
+            }
 
-                h2 {
-                    color: rebeccapurple;
-                    font-weight: 600;
-                }
-        }
-    }
-}
-@media screen and (max-width: 1200px) {
-.Navigation{
-    .options{
-        .Navoption{
-            h2{
-                font-size: 18px;
+            h2 {
+                color: rebeccapurple;
+                font-weight: 600;
             }
         }
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .Navigation {
+        .options {
+            .Navoption {
+                h2 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
 }
+
 @media screen and (max-width: 1000px) {
-    .Navigation{
-        min-width:unset;
+    .Navigation {
+        min-width: unset;
         max-width: 70px;
         justify-content: center;
         gap: 20%;
-        .menuLogo{
+
+        .menuLogo {
             min-width: 56%;
             max-width: 56%;
         }
-        .options{
-            .Navoption{
+
+        .options {
+            .Navoption {
                 justify-content: unset;
                 gap: 2px;
-                .emptydiv{
+
+                .emptydiv {
                     width: 4px;
                 }
-                h2{
+
+                h2 {
                     font-size: 18px;
                     display: none;
                     min-width: unset;
@@ -186,59 +197,68 @@
             }
         }
     }
-    
- }
- @media screen and (max-width: 565px) {
-        .Navigation{
-            flex-direction: row;
+
+}
+
+@media screen and (max-width: 565px) {
+    .Navigation {
+        flex-direction: row;
+        min-height: unset;
+        justify-content: space-around;
+        max-width: 100%;
+        min-width: 100%;
+        gap: 10px;
+        padding: 10px;
+
+        .menuLogo {
+            min-width: unset;
             min-height: unset;
-            justify-content: space-around;
-            max-width: 100%;
-            min-width: 100%;
-            gap: 10px;
-            padding: 10px;
-            .menuLogo{
-                min-width:unset;
-                min-height: unset;
-                width: 60px;
-                height: 60px;
-                padding: 5px;
-            
-            }
-            .options{
-                flex-direction: row;
-                width: fit-content;
-                min-width: unset;
-                .Navoption{
-                    .emptydiv{
-                        display: none
-                    }
-                    .image{
-                        &:hover{
-                            border-bottom: 2px solid rebeccapurple;
-                        }
+            width: 60px;
+            height: 60px;
+            padding: 5px;
+
+        }
+
+        .options {
+            flex-direction: row;
+            width: fit-content;
+            min-width: unset;
+
+            .Navoption {
+                .emptydiv {
+                    display: none
+                }
+
+                .image {
+                    &:hover {
+                        border-bottom: 2px solid rebeccapurple;
                     }
                 }
             }
         }
+    }
 
- }
- @media screen and (max-width: 435px) {
-    .Navigation{
+}
+
+@media screen and (max-width: 435px) {
+    .Navigation {
         position: absolute;
         justify-content: space-between;
         padding: 10px 30px;
-        .hamburger{
+
+        .hamburger {
             display: block;
         }
-        .dropdown{
+
+        .dropdown {
             display: flex;
             bottom: -238%;
             right: 3%;
         }
-        .options{
+
+        .options {
             display: none;
         }
     }
 
- }
+}
