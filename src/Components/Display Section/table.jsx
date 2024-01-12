@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { TableFilter } from "./tableFilter";
-import { FilterOptions, PaginationButtons } from "../../Assets/consts/const";
+import { FilterOptions, PaginationButtons, TableData } from "../../Assets/consts/const";
 
 export const Table = () => {
   const [filter,setFilter]= useState(1)
@@ -35,22 +35,17 @@ export const Table = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>John Doe</td>
-              <td>12345</td>
-              <td>Gold Plan</td>
-              <td>$500</td>
-              <td>2024-01-11</td>
-              <td>Active</td>
-            </tr>
-            <tr>
-              <td>Jane Smith</td>
-              <td>67890</td>
-              <td>Silver Plan</td>
-              <td>$300</td>
-              <td>2024-01-12</td>
-              <td>Inactive</td>
-            </tr>
+            {TableData.map((item)=>{
+              const{name,enrollment,plan,amount,date,status,id}=item
+              return<tr key={id}>
+                      <td>{name}</td>
+                      <td>{enrollment}</td>
+                      <td>{plan}</td>
+                      <td>{amount}</td>
+                      <td>{date}</td>
+                      <td>{status}</td>
+                    </tr>
+            })}
           </tbody>
         </table>
       </div>

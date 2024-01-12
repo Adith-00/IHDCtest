@@ -58,3 +58,25 @@ export const FilterOptions=[
         notification:5
     }
 ]
+export const TableData=[
+   
+    {
+        id:1,
+        name: 'John Doe',
+        enrollment: '12345',
+        plan: '6 month',
+        amount: '$500',
+        date: '2024-01-11',
+        status: 'Active',
+    },
+    {
+        id:2,
+        name: 'Jane Smith',
+        enrollment: '67890',
+        plan: '2 month',
+        amount: '$300',
+        date: '2024-01-12',
+        status: 'Inactive',
+    },
+     
+]
